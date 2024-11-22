@@ -1,0 +1,47 @@
+#contenedor-ingresar{
+    height: max-content;
+    width: max-content;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    box-shadow: 1px 1px 65px rgb(215, 215, 215);
+}
+#form-ingreso{
+    display: grid;
+    width: max-content;
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+}
+#form-ingreso input{
+    border: none;
+}
+
+.alert-usuerror{
+    position: fixed;
+    background-color: rgb(237, 237, 237);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    width: 30%;
+    top: 80%;
+    left: 5%;
+    text-align: center;
+    padding: 1rem;
+    z-index:1000;
+    color: red;
+}
+.alert-usuregis{
+    position: fixed;
+    background-color: rgb(237, 237, 237);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    width: 30%;
+    top: 80%;
+    left: 5%;
+    text-align: center;
+    padding: 1rem;
+    z-index:1100;
+    color: rgb(14, 26, 159);
+}

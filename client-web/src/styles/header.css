@@ -1,0 +1,113 @@
+/*encabezado*/
+.header-principal{
+    position: sticky;  
+    top: 0%; 
+    filter: drop-shadow(2px 2px  10px rgb(0, 38, 255));
+    z-index: 1000;
+}
+/*navegador*/
+nav{
+    background-color: rgb(0, 38, 255);
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 5% 15% 60% 20%;
+    align-items: center;
+} 
+/*encabezado menu desplegable*/
+#boton-menu{
+    height: max-content;
+    width: max-content;
+    margin: 10px ;
+
+}
+#offcanvasExample{
+    width: max-content ;
+    height: 50rem;
+    align-items: center;
+}
+#menu-desplegable-button{
+    background-color: rgb(0, 38, 255);
+    width: 10rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+#menu-desplegable-button a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms ease;
+}
+#menu-desplegable-button a:hover{
+    color: rgb(236, 164, 0);
+}
+/*encabezado*/
+#logo_cine_encabezado{
+    width: 60px;
+    margin-left: 3rem;
+    border-radius: 50%;
+}
+#form_buscador_peliculas{
+    width: 35rem;
+    height: max-content;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+#input-Buscador{
+    width: 400px;
+    margin-right: 1rem;
+}
+#boton-buscar-container{
+    width: 260px;
+    display: grid;
+    justify-content: center;
+}
+#buscar-button{
+    width: min-content;
+}
+#boton-ingresar{
+    margin: auto;
+    width: max-content;
+}
+
+/*Sub menu*/
+#subMenu{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,auto);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid  rgb(2, 57, 255);
+    border-radius: 20%;
+}
+#subMenu [type="button"]{
+    background-color: rgb(2, 57, 255);
+    text-decoration: none;
+    padding: 5px;
+    width: 150px;
+    
+
+}
+#subMenu button a {
+    text-decoration: none;
+    color: white;
+    transition: all 300ms ease;
+}
+#subMenu button a:hover{
+
+    color: rgb(236, 164, 0);
+}
+
+.alert-sesclose{
+    position: fixed;
+    background-color: rgb(2, 57, 255);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    width: max-content;
+    top: 80%;
+    left: 5%;
+    text-align: center;
+    padding: 1rem;
+    z-index:1100;
+    color: rgb(255, 255, 255);
+}

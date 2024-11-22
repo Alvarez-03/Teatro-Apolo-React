@@ -1,0 +1,77 @@
+/*Seccion peliculas*/
+#seccion-card{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 1.5;
+    justify-items: center;
+}
+/*tarjeta de la pelicula*/
+#card-pelicula{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 100%;
+    width: 18rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    filter: drop-shadow(10px 2px  10px rgb(34, 34, 34));
+    transform-style: preserve-3d ;
+    transition: 0.2s;
+}
+#card-pelicula:hover{
+    transform:scale(1.1);
+    transition: 0.2s;
+    cursor:pointer;
+
+}
+#card-pelicula #trailer{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#img-poster{
+    width: 18rem;
+    height: 20rem;
+    overflow-clip-margin: content-box;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+#titulo-pelicula{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#proximamente-text{
+    margin-top: -20rem;
+    justify-content: center;
+    width: 100px;
+    background-color: rgb(236, 164, 0);
+    padding: 0px;
+    font-size: small;
+    position: absolute;
+    z-index: 100;
+    
+}
+#clasificaciones-pelicula{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+#clasificacion{
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    background-color: rgb(236, 164, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 12px;
+
+}
+#link-trailer{
+    margin-bottom: 1rem;
+}
+#icon-youtube{
+    margin-right: 5px;
+}
+.content-buttons{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    justify-content: center;
+}

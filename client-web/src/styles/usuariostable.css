@@ -1,0 +1,40 @@
+.container-addusu{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 10px rgb(120, 120, 120);
+    width: 25rem;
+    justify-items:center ;
+}
+.headeradd{
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    font-size: 2rem;
+}
+.closeBtn{
+    text-align: right;
+    margin: 5px;
+}
+.closeBtn:hover{
+    cursor: pointer;
+    color: red;
+}
+.headeradd h3{
+    margin: 5px;
+    text-align: left;
+}
+.popupSection{
+    margin: 1rem;
+}
+.popupSection input{
+    margin: 5px;
+}
+.btn-edit:hover{
+    color: rgb(9, 142, 9);
+}
+.btn-elm:hover{
+    color: rgb(255, 0, 0);
+}
