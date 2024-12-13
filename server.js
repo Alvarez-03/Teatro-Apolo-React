@@ -176,7 +176,6 @@ app.get('/funciones/:funcionid', (req,res)=>{
     })
 })
 
-
 app.post('/funciones', (req,res)=>{
     const{funcionid,peliculaid,fecha}=req.body
     console.log(req.body)
@@ -185,6 +184,27 @@ app.post('/funciones', (req,res)=>{
     pool.query(sql,[funcionid,peliculaid,fecha],(error,resultado)=>{
         if(error) return res.json(error);
         return res.status(201).json('La funcion se agrego a la base de datos')
+    })
+})
+
+app.delete('/funciones/:funcionid', (req,res)=>{
+    const funcionid = Number(req.params.funcionid);
+
+    if(isNaN(funcionid)){
+        return res.status(400).send("El ID de la funcion no es valida")
+    }
+
+    const sql='DELETE FROM funciones WHERE "funcionid"=$1';
+    pool.query(sql,[funcionid],(error,resultado)=>{
+        if(error){
+            console.log("Error al eliminar el Usuario: ",error);
+            return res.status(500).json({error: error.message})
+        }
+        if (resultado.rowCount === 0) {
+            return res.status(404).send(`No se encontró el usuario con ID ${funcionid}`);
+        }
+
+        return res.status(200).send(`El usuario con ID ${funcionid} fue eliminado.`);
     })
 })
 
@@ -212,14 +232,36 @@ app.get('/compras/:usuarioid',(req,res)=>{
 })
 
 app.post('/compras',(req,res)=>{
-    const{usuarioid, funcionid}=req.body;
+    const{usuarioid, funcionid, asientos}=req.body;
     console.log(req.body)
-    const sql='INSERT INTO compras (usuarioid,funcionid) VALUES($1,$2)'
-    pool.query(sql,[usuarioid,funcionid],(error,resultado)=>{
+    const sql='INSERT INTO compras (usuarioid,funcionid,asientos) VALUES($1,$2,$3)'
+    pool.query(sql,[usuarioid,funcionid,asientos],(error,resultado)=>{
         if(error){
              return res.status(500).json(error);
         }
         return res.status(201).json('Compra exitosa')
     })
 })
+
+app.delete('/compras/:compraid', (req,res)=>{
+    const compraid = Number(req.params.compraid);
+
+    if(isNaN(compraid)){
+        return res.status(400).send("El ID de la compra no es valida")
+    }
+
+    const sql='DELETE FROM compras WHERE compraid=$1';
+    pool.query(sql,[compraid],(error,resultado)=>{
+        if(error){
+            console.log("Error al eliminar La compra: ",error);
+            return res.status(500).json({error: error.message})
+        }
+        if (resultado.rowCount === 0) {
+            return res.status(404).send(`No se encontró la compra con ID ${compraid}`);
+        }
+
+        return res.status(200).send(`El usuario con ID ${compraid} fue eliminado.`);
+    })
+})
+  
 

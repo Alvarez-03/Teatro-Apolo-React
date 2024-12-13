@@ -46,12 +46,9 @@ nav{
     margin-left: 3rem;
     border-radius: 50%;
 }
-#form_buscador_peliculas{
-    width: 35rem;
-    height: max-content;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 60% 40%;
+#tittle-header{
+    color: white;
+    text-align: center;
 }
 #input-Buscador{
     width: 400px;
@@ -68,6 +65,10 @@ nav{
 #boton-ingresar{
     margin: auto;
     width: max-content;
+}
+#h2-dashboard{
+    text-align: center;
+    color: white;
 }
 
 /*Sub menu*/

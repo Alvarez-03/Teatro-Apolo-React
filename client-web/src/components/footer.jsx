@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../styles/footer.css"
 
 const footer=()=>{
@@ -28,7 +29,7 @@ const footer=()=>{
                         </div>
                         <div class="formulario-contacto">
                             <button type="button" >
-                                <a href="formulario_contacto.html">CONTACTANOS</a>
+                                <Link href="formulario_contacto.html" to={"/ContactanosTeatroApolo"}>CONTACTANOS</Link>
                             </button>
                         </div>
                     </div>

@@ -1,0 +1,30 @@
+#form-addPelicula{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    box-shadow: 1px 1px 10px rgb(120, 120, 120);
+    width: 25rem;
+    justify-items:center ;
+}
+    #form-addPelicula input{
+        margin: 5px;
+    }
+    #form-addPelicula button{
+        margin: 10px;
+    }
+    #form-addPelicula header{
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+    .closeBtn{
+        width: min-content;
+        height: min-content;
+        font-size: 30px;
+        text-align: right;
+        margin: 5px;
+    }
+    .closeBtn:hover{
+        cursor: pointer;
+        color: red;
+    }

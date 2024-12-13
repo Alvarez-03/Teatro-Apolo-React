@@ -1,0 +1,29 @@
+#tittle-contacto{
+    margin-top: 6vh;
+    text-align: center;
+}
+#form-contacto{
+    display: grid;
+    padding: 1rem;
+}
+
+#form-contacto input{
+    margin: 5px;
+    padding: 10px;
+}
+
+#form-contacto textarea{
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    box-shadow: 1px 1px 10px rgb(194, 194, 194);
+    height: min-content;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+}
+
+#form-contacto button{
+    width: min-content;
+    margin: auto;
+
+}

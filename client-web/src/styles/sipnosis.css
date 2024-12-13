@@ -35,9 +35,70 @@
 
 }
 .container-funciones{
+    display: grid;
     padding: 1rem;
     width: 80%;
     border-radius: 1rem 1rem 0px 0px;
     color: white;
     background-color:  rgb(2, 57, 255);
+}
+
+.asientos-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    
+}
+
+.asiento {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 8vh;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+.asiento::selection{
+    width: 8vh;
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.asiento i{
+    color: rgb(0, 0, 0);
+}
+
+.asiento.seleccionado {
+    background-color: #4caf50;
+    color: white;
+}
+.asiento.reservado {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+.btn-comprar{
+    background-color: rgb(236, 164, 0);
+    font-size: 18px;
+}
+.btn-comprar i{
+    
+    margin-right: 5px;
+}
+.btn-comprar:hover{
+    background-color: rgb(230, 130, 0);
+}
+.btn-cerrar{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.btn-cerrar:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 0);
 }

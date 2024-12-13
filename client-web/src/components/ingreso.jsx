@@ -31,6 +31,16 @@ const Ingresarusuario =({usuarios})=>{
         e.preventDefault(e)
         try{
 
+            if ( usuariosData.email === "admin@admin.com" && usuariosData.password === "admin"){
+                localStorage.setItem("usuario", "Administrador");
+                setTimeout(() => {
+                navigate("/adminTA"); 
+                window.location.reload();
+                }, 500);
+                spanOpenBienv();
+                return;
+            }
+
             const usuarioEncontrado= usuarios.find(
                 (usuario)=> usuario.email === usuariosData.email && usuario.password === usuariosData.password
             )
